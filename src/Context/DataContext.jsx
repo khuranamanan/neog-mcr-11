@@ -10,10 +10,13 @@ const DataContext = createContext();
 export function DataProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, appInitialState);
 
-  const moviesYears = state.moviesData.reduce(
-    (result, { year }) => (result.includes(year) ? result : [...result, year]),
-    []
-  );
+  const moviesYears = state.moviesData
+    .reduce(
+      (result, { year }) =>
+        result.includes(year) ? result : [...result, year],
+      []
+    )
+    .sort();
 
   const moviesGenres = state.moviesData.reduce((genres, movie) => {
     movie.genre.forEach((genre) => {

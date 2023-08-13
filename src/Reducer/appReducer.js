@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { movies } from "../Data/data";
 
 export const appInitialState = {
@@ -32,11 +33,13 @@ export function appReducer(state, action) {
         starredList: state.starredList.filter((id) => id !== action.payload),
       };
 
-    case "ADD_MOVIE":
+    case "ADD_MOVIE": {
+      toast.success("Movie Added Successfully");
       return {
         ...state,
         moviesData: [...state.moviesData, action.payload],
       };
+    }
 
     default:
       return state;

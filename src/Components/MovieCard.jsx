@@ -62,16 +62,16 @@ function MovieCard({ movie }) {
       </div>
       <div className="flex flex-col gap-2 items-center justify-between">
         <button
-          className={`bg-blue-500 text-white w-full px-2 py-1 rounded ${
-            isMovieInWatchlist ? "bg-red-500" : ""
+          className={`text-white w-full px-2 py-1 rounded ${
+            isMovieInWatchlist ? "bg-red-500" : "bg-blue-500"
           }`}
           onClick={handleWatchlistToggle}
         >
           {isMovieInWatchlist ? "Remove from Watchlist" : "Add to Watchlist"}
         </button>
         <button
-          className={`bg-yellow-400  w-full px-2 py-1 rounded ${
-            isMovieInStarredList ? "bg-red-500" : ""
+          className={`w-full px-2 py-1 rounded ${
+            isMovieInStarredList ? "bg-red-500 text-white" : "bg-yellow-400"
           }`}
           onClick={handleStarredListToggle}
         >
