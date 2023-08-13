@@ -82,7 +82,7 @@ function MovieDetailsPage() {
         <div className="flex flex-col gap-2 items-center justify-between">
           <button
             className={`text-white w-full px-2 py-1 rounded ${
-              isMovieInWatchlist ? "bg-red-500" : "bg-blue-500"
+              isMovieInWatchlist ? "bg-red-500" : "bg-gray-900"
             }`}
             onClick={handleWatchlistToggle}
           >
