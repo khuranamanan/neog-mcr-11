@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { v4 as uuid } from "uuid";
 import { useData } from "../Context/DataContext";
 import { toast } from "react-toastify";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 function AddMovieModal({ isOpen, closeModal }) {
   const { dispatch } = useData();
@@ -115,13 +116,19 @@ function AddMovieModal({ isOpen, closeModal }) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="relative w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
                   Add Movie
                 </Dialog.Title>
+                <button
+                  className="absolute top-2 right-2 text-gray-400"
+                  onClick={closeModal}
+                >
+                  <AiOutlineCloseCircle size={25} />
+                </button>
                 <form onSubmit={handleSubmit}>
                   <div className="mt-4 space-y-4">
                     <label className="block font-medium">Title:</label>
