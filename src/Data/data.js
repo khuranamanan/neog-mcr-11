@@ -28,6 +28,20 @@ export const movies = [
       "https://m.media-amazon.com/images/M/MV5BMjI1NDYzNzY2Ml5BMl5BanBnXkFtZTgwODQwODczNTM@._V1_.jpg",
   },
   {
+    id: "wdd34-effe2njb-jb43434",
+    title: "Insidious: The Haunting",
+    year: 2022,
+    genre: ["Horror", "Thriller"],
+    rating: 2,
+    director: "Alice Director",
+    writer: "Bob Writer",
+    cast: ["Actor X", "Actress Y"],
+    summary:
+      "A terrifying horror film that takes you to the depths of the supernatural.",
+    imageURL:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Insidious_poster.jpg/220px-Insidious_poster.jpg",
+  },
+  {
     id: "whdb4b-dwjdn2-128njbbj",
     title: "Inside Out",
     year: 2015,
