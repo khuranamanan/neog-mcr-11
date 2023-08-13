@@ -1,7 +1,14 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import NavigationBar from "../Components/NavigationBar";
+import { useEffect } from "react";
 
 function RootLayout() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="min-h-screen">
       <NavigationBar />
