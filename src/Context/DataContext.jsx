@@ -32,8 +32,8 @@ export function DataProvider({ children }) {
   }, [state.moviesData]);
 
   useEffect(() => {
-    localStorage.setItem("watchLlist", JSON.stringify(state.watchLlist));
-  }, [state.watchLlist]);
+    localStorage.setItem("watchList", JSON.stringify(state.watchList));
+  }, [state.watchList]);
 
   useEffect(() => {
     localStorage.setItem("starredList", JSON.stringify(state.starredList));
